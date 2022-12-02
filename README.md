@@ -1,7 +1,7 @@
 Boas vindas ao repositório do Trybe Futebol Clube!
 man_technologist O que deverá ser desenvolvido
 
-Exemplo app front
+![image](https://user-images.githubusercontent.com/67080149/205332741-d5a88685-73fb-4a9f-b5d4-3d40439cfae4.png)
 
 O TFC é um site informativo sobre partidas e classificações de futebol! soccer
 
