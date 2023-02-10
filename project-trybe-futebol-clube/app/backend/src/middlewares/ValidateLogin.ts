@@ -1,5 +1,7 @@
 import { Request, Response, NextFunction } from 'express';
 
+// Esta função verifica se um endereço de e-mail é válido usando uma expressão regular.
+// Ela toma uma string como parâmetro e retorna true se o email for válido e false se não for.
 const emailValidate = (email: string): boolean => {
   const regexEmail = /^[\w.+]+@\w+.\w{2,}(?:.\w{2})?$/gim;
   const result = regexEmail.test(email);
@@ -7,6 +9,8 @@ const emailValidate = (email: string): boolean => {
   return true;
 };
 
+// Esta função verifica se os campos email e password foram preenchidos, se o email é válido e se a senha tem pelo menos 6 caracteres.
+// Se alguma dessas condições não for satisfeita, uma resposta apropriada é enviada ao usuário. Se todas as condições forem satisfeitas, o próximo middleware é chamado.
 export default (req: Request, res: Response, next: NextFunction) => {
   const { email, password } = req.body;
 

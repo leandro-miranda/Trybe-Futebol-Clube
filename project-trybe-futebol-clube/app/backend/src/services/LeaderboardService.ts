@@ -10,6 +10,8 @@ class LeaderboardService {
     this.serviceTeam = new TeamService();
   }
 
+  // A função homeTeamLeaderboardFalse() realiza a busca de todos os jogos que não estão em andamento no banco de dados, bem como todos os times cadastrados.
+  // Ela retorna um objeto contendo as informações dos jogos finalizados e dos times cadastrados.
   public homeTeamLeaderboardFalse = async () => {
     const allMatches = await this.service.matchesGetAll();
     const allTeams = await this.serviceTeam.getAll();
